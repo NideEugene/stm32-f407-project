@@ -1,0 +1,75 @@
+# ============================================================
+# STM32 / Keil MDK-ARM 工程 .gitignore
+# 目标：只跟踪源码与工程配置，排除编译产物和个人设置
+# ============================================================
+
+# ---------- Keil MDK-ARM 编译输出 ----------
+# 目标文件与依赖
+*.o
+*.d
+*.crf
+*.dep
+*.lnp
+*.iex
+*.sct
+*.sbr
+*.plg
+
+# 可执行与烧录文件
+*.axf
+*.elf
+*.hex
+*.bin
+*.lib     # 若使用 CMSIS DSP 预编译库，可注释掉本行
+
+# 映射与报告
+*.map
+*.lst
+*.htm
+*.build_log.htm
+
+# 编译输出目录（Keil 默认的 Objects / Listings / DebugConfig）
+Objects/
+Listings/
+DebugConfig/
+Output/
+output/
+
+# uVision 自动生成的中间目录（各工程 MDK-ARM 下的同名子文件夹）
+MDK-ARM/*/
+
+# ---------- Keil 个人设置（因人而异，不应共享） ----------
+# 窗口布局、断点、调试器个人配置
+*.uvguix
+*.uvguix.*
+*.uvopt.bak
+*.uvprojx.bak
+JLinkLog.txt
+JLinkSettings.ini
+
+# ---------- 备份与临时文件 ----------
+*.bak
+*.tmp
+*.log
+*~
+~$*
+*.autosave
+
+# ---------- 系统文件 ----------
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+*.swp
+
+# ============================================================
+# 可选：如需进一步压缩仓库体积，可取消下面注释
+# 这些是 CMSIS 自带的预编译 DSP 库与示例（约 80 MB），
+# 只有在用到 DSP 功能时才需要，可从 STM32CubeMX / CMSIS 包重新获取
+# ============================================================
+# Drivers/CMSIS/Lib/
+# Drivers/CMSIS/DSP/Examples/
+# Drivers/CMSIS/DSP/Lib/
