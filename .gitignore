@@ -35,8 +35,8 @@ DebugConfig/
 Output/
 output/
 
-# uVision 自动生成的中间目录（各工程 MDK-ARM 下的同名子文件夹）
-MDK-ARM/*/
+# 注意：不要使用 MDK-ARM/*/ 这种通配，会误伤 MDK-ARM/RTE/ 下的
+# RTE_Components.h（构建必需）。构建产物已由上面的扩展名规则覆盖。
 
 # ---------- Keil 个人设置（因人而异，不应共享） ----------
 # 窗口布局、断点、调试器个人配置
